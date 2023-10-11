@@ -4,7 +4,16 @@ def direct_recursive_destructure(data: dict,
                                  sep: str="-"
                                  ):
     """
+    Recursively de-structure a JSON object and collect key-related information.
 
+    Args:
+        data (dict): The input JSON object to be de-structured.
+        n_nestings (int): The number of nestings in the JSON structure.
+        on_key_trail (bool): Whether to include key trails.
+        sep (str): The separator used in key trails.
+
+    Returns:
+        tuple: A tuple containing the de-structured information, including keys, values, key trails, and nesting level.
     """
     if on_key_trail:
         trailed_keys = []
@@ -45,6 +54,17 @@ def indirect_recursive_json_destructure(data: dict,
                                         on_key_trail: bool=True,
                                         sep: str="-"
                                         ):
+    """
+    Recursively de-structure a JSON object using an alternative approach.
+
+    Args:
+        data (dict): The input JSON object to be de-structured.
+        on_key_trail (bool): Whether to include key trails.
+        sep (str): The separator used in key trails.
+
+    Returns:
+        tuple: A tuple containing the de-structured information, including keys, values, key trails, and nesting level.
+    """
     if on_key_trail:
         trailed_keys = []
     only_keys = []
