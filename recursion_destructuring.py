@@ -50,10 +50,10 @@ def direct_recursive_destructure(data: dict,
         return only_keys, keys_with_their_values, returned_n_nestings
 # only_keys, keys_with_their_values, trailed_keys, returned_n_nestings = direct_recursive_destructure(json_obj)
 
-def indirect_recursive_json_destructure(data: dict, 
-                                        on_key_trail: bool=True,
-                                        sep: str="-"
-                                        ):
+def indirect_recursive_destructure(data: dict, 
+                                   on_key_trail: bool=True,
+                                   sep: str="-"
+                                   ):
     """
     Recursively de-structure a JSON object using an alternative approach.
 
